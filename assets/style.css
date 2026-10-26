@@ -1,0 +1,265 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: blueviolet;
+}
+
+header{
+    background: rgb(0, 64, 255);
+    color: black;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+
+nav{
+    display: flex;
+    justify-content: center;
+    background: black;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li{
+    margin: 0;
+}
+
+nav a{
+    color: aliceblue;
+    padding: 12px 20px;
+    display: block;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+nav a:hover{
+    background: red;
+}
+
+section{
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: salmon;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ============ */
+/* PSEUDO-CLASS */
+/* ============ */
+
+.body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+:hover & :active pada tombol
+.button{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover{
+    background-color: #0056b3;
+}
+
+.button:active{
+    background-color: #003366;
+}
+
+:focus pada input form
+.input-field{
+    padding: 10px;
+    border: 1px solid #bf0404;
+    border-radius: 4px;
+    width: 250px;
+    outline: none;
+}
+
+.input-field:focus{
+    border-color: #007bff;
+    box-shadow: 0 0 5px ;
+}
+
+/* ============ */
+/* PSEUDO-ELEMENT */
+/* ============ */
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 1. Pseudo-element ::before (Menambahkan ikon/simbol sebelum teks) */
+.title-icon::before {
+  content: "📌 ";
+  font-size: 1.2em;
+}
+
+/* 2. Pseudo-element ::after (Menambahkan penjelas/badge setelah teks) */
+.title-badge::after {
+  content: " [Wajib Dibaca]";
+  color: #dc3545;
+  font-size: 0.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* 3. Pseudo-element ::first-letter (Memperbesar huruf pertama paragraf/Drop Cap) */
+.drop-cap::first-letter {
+  font-size: 300%;
+  font-weight: bold;
+  color: #007bff;
+  float: left;
+  line-height: 0.8;
+  padding-right: 8px;
+}
+
+/* 4. Pseudo-element ::first-line (Mewarnai baris pertama paragraf) */
+.highlight-first-line::first-line {
+  font-weight: bold;
+  color: #0000ff;
+}
+
+/* 5. Pseudo-element ::selection (Mewarnai teks saat diblok/dihighlight oleh user) */
+::selection {
+  background-color: #bc8d01;
+  color: #000;
+}
+
+
+/* ============ */
+/* ANIMASI */
+/* ============ */
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+   1. ANIMASI 1: Bola Membentul / Membal
+   ========================================== */
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: #ff4757;
+  border-radius: 50%;
+  position: relative;
+  animation: bounce 1.5s ease-in-out infinite alternate;
+}
+
+/* Keyframes untuk Animasi Bola */
+@keyframes bounce {
+  0% {
+    left: 0;
+    top: 0;
+    background-color: #fb0015;
+  }
+  50% {
+    background-color: #ff02ee;
+  }
+  100% {
+    left: calc(100% - 50px);
+    top: 0;
+    background-color: #3c2ed5;
+  }
+}
+
+/* ==========================================
+   2. ANIMASI 2: Teks Berputar & Membesar
+   ========================================== */
+.pulse-box {
+  width: 100px;
+  height: 100px;
+  background-color: #057cf4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 20px auto;
+  animation: pulseRotate 3s ease-in-out infinite;
+}
+
+/* Keyframes untuk Denyut & Rotasi */
+@keyframes pulseRotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+    background-color: #1e90ff;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    background-color: #3742fa;
+    border-radius: 50%;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    background-color: #1e90ff;
+  }
+}
+
+/* ==========================================
+   3. ANIMASI 3: Loading Spinner
+   ========================================== */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #ff0000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Keyframes untuk Spinner */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
